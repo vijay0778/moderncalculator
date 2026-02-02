@@ -1,0 +1,86 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Calculator Container */
+.calculator {
+    background: #1e1e2f;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    width: 320px;
+}
+
+/* Screen Styling */
+.calculator-screen {
+    width: 100%;
+    height: 60px;
+    background: #2d2d44;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 2rem;
+    color: #fff;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+/* Keys Grid Layout */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+}
+
+/* Button Styling */
+button {
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Number Buttons */
+button:not(.operator):not(.all-clear):not(.equal-sign) {
+    background: #3e3e5e;
+    color: #fff;
+}
+
+/* Operator Buttons */
+button.operator {
+    background: #ff8c42;
+    color: #fff;
+}
+
+/* AC Button */
+button.all-clear {
+    background: #ff4c4c;
+    color: #fff;
+}
+
+/* Equal Button */
+button.equal-sign {
+    grid-column: span 4;
+    background: #2ecc71;
+    color: white;
+}
+
+/* Hover & Active Effects */
+button:hover {
+    filter: brightness(1.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
